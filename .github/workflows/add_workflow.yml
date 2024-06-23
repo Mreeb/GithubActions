@@ -5,12 +5,7 @@ on:
       - add.py
       - unit_test_add.py
 
-  pull_request:
-    paths:
-      - add.py
-      - unit_test_add.py
-
-job:
+jobs:
   build:
     runs-on: ubuntu-latest
 
@@ -20,14 +15,8 @@ job:
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt]; then pip install -r
-        requirements.txt; fi
+        python-version: '3.11'
 
     - name: run unit test
       run: |
-        python3 -m unittest discover
+        python3 -m unittest unit_test_add.py
