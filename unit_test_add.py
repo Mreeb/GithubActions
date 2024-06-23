@@ -1,5 +1,5 @@
 import unittest
-from add import add
+from add import add, sub
 
 
 class Testadd(unittest.TestCase):
