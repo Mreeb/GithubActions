@@ -3,7 +3,7 @@ def apple():
 
 
 def banana():
-    print("This is a banana")
+    print("This is a bananaa")
 
 
 if __name__ == "__main__":
