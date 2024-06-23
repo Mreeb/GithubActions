@@ -1,6 +1,12 @@
 name: Super-Linter
 
-on: push
+on:
+ workflow_dispatch:
+ push:
+   branches:
+   - "master"
+   paths:
+   - superlinter.py
 
 jobs:
   super-lint:
